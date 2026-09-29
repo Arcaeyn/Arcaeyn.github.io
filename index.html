@@ -194,70 +194,156 @@ details.feat .note{font-size:.88rem;color:var(--buff-soft);margin:.2rem 0 .5rem}
 
 /* ---------- clarity ---------- */
 .clarity{background:var(--buff);color:var(--ink)}
-.clarity .grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(2.5rem,7vw,6rem);align-items:center}
-.clarity p{color:rgba(23,35,28,.78)}
-.clarity .stack{font-family:var(--data);font-weight:700;font-size:1.05rem;color:var(--ink);margin:1.6rem 0 .4rem}
-.clarity .copy ul{list-style:none;padding:0;margin:1.4rem 0 0;max-width:34em;border-top:1px solid rgba(23,35,28,.18)}
-.clarity .copy li{padding:.7rem 0;border-bottom:1px solid rgba(23,35,28,.18);display:grid;grid-template-columns:9rem 1fr;gap:1rem;font-size:.97rem;line-height:1.45}
-.clarity .copy li b{font-family:var(--data);font-weight:700;font-size:1.05rem}
-.clarity .fine{font-size:.85rem;color:rgba(23,35,28,.6);margin-top:1.2rem}
+.clarity .grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(2.5rem,7vw,6rem);align-items:start}
+.clarity p{color:rgba(23,35,28,.8)}
+.cl-head{display:flex;align-items:center;gap:1.1rem;margin-bottom:.9rem}
+.cl-icon{width:64px;height:64px;flex:none;border-radius:15px;box-shadow:0 0 0 1px rgba(23,35,28,.14)}
+.cl-head h2{margin:0}
+.clarity .stack{font-family:var(--data);font-weight:700;font-size:1.05rem;color:var(--ink);margin:1.4rem 0 .3rem;max-width:34em;line-height:1.35}
+.clarity .copy ul{list-style:none;padding:0;margin:1.4rem 0 0;max-width:38em;border-top:1px solid rgba(23,35,28,.18)}
+.clarity .copy li{padding:.75rem 0;border-bottom:1px solid rgba(23,35,28,.18);display:grid;grid-template-columns:9.5rem 1fr;gap:1rem;font-size:.97rem;line-height:1.45}
+.clarity .copy li b{font-family:var(--data);font-weight:700;font-size:1.08rem;line-height:1.2}
+.clarity .fine{font-size:.86rem;color:rgba(23,35,28,.62);margin-top:1.2rem;max-width:38em}
+.phone-col{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.phone-hint{font-family:var(--data);font-weight:600;font-size:.95rem;color:rgba(23,35,28,.7);text-align:center;max-width:300px;line-height:1.3;min-height:2.6em}
 
-.phone{width:300px;height:620px;border-radius:46px;background:#111916;padding:11px;box-shadow:0 30px 60px -20px rgba(23,35,28,.55),inset 0 0 0 2px #2c3a33;position:relative;flex:none}
-.screen{width:100%;height:100%;border-radius:36px;overflow:hidden;background:#F7F8FA;position:relative;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;color:#1B2230;font-size:14px;line-height:1.35}
-.island{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:90px;height:26px;border-radius:14px;background:#000;z-index:30}
-.app-view{position:absolute;inset:0;padding:52px 18px 78px;display:none;flex-direction:column}
-.app-view.on{display:flex}
-.app-title{font-weight:700;font-size:26px;letter-spacing:-.02em;margin:4px 0 2px}
-.app-sub{color:#667085;font-size:13px;margin-bottom:14px}
-.tabs{position:absolute;left:0;right:0;bottom:0;height:72px;background:rgba(255,255,255,.94);border-top:1px solid #E4E7EC;display:flex;justify-content:space-around;padding-top:9px;z-index:20}
-.tabs button{border:0;background:none;font-size:11px;color:#98A2B3;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;font-family:inherit}
-.tabs button svg{width:22px;height:22px}
-.tabs button.on{color:#2D5BD0}
-.cam{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,#3a4550,#141a20 75%);display:flex;flex-direction:column;align-items:center;padding:56px 18px 90px;color:#fff}
-.cam .step{font-size:12px;opacity:.7;margin-bottom:4px}
-.cam .ask{font-size:19px;font-weight:600;margin-bottom:10px;text-align:center}
-.cam svg.face{width:220px;height:280px;flex:none}
-.cam .face .outline{transition:transform .45s ease}
-.cam .dots{display:flex;gap:6px;margin:10px 0 16px}
-.cam .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.3)}
-.cam .dots i.on{background:#fff}
-.shutter{flex:none;width:66px;height:66px;border-radius:50%;border:4px solid #fff;background:transparent;cursor:pointer;padding:4px}
-.shutter span{display:block;width:100%;height:100%;border-radius:50%;background:#fff;transition:transform .1s}
-.shutter:active span{transform:scale(.88)}
-.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .25s}
-.flash.go{opacity:.9;transition:none}
-.analyzing{position:absolute;inset:0;background:#F7F8FA;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:5}
-.analyzing.on{display:flex}
-.spin{width:54px;height:54px;border-radius:50%;border:4px solid #E4E7EC;border-top-color:#2D5BD0;animation:spin .8s linear infinite}
+/* conflict checker (site style) */
+.conf{margin-top:clamp(3.5rem,8vw,6rem);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,4rem);border-top:1.5px solid var(--ink);padding-top:2.2rem}
+.conf h3{font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:.95}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.2rem 0 1rem}
+.chip{border:1.5px solid var(--ink);background:transparent;border-radius:2px;padding:.35rem .7rem;font-family:var(--data);font-weight:700;font-size:1rem;cursor:pointer;color:var(--ink)}
+.chip small{font-weight:500;opacity:.65;margin-left:.3rem}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--buff)}
+.chip:hover{border-color:var(--sq-dark)}
+.sens{display:flex;align-items:center;gap:.7rem;font-size:.95rem}
+.clarity .switch{background:rgba(23,35,28,.18)}
+.clarity .switch::after{background:#fff}
+.clarity .switch:checked{background:var(--ink)}
+.clarity .switch:checked::after{background:var(--buff)}
+.findings{border-top:1px solid rgba(23,35,28,.2)}
+.finding{display:grid;grid-template-columns:5.2rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(23,35,28,.2)}
+.sev{font-family:var(--data);font-weight:700;font-size:.9rem;align-self:start;padding:.15rem .5rem;border-radius:2px;text-align:center;color:#fff}
+.sev.high{background:#A34F4A}.sev.medium{background:#946331}.sev.low{background:#665C4F}
+.finding b{font-family:var(--data);font-weight:700;font-size:1.15rem;display:block;line-height:1.15;margin-bottom:.2rem}
+.finding p{margin:0 0 .35rem;font-size:.95rem}
+.finding .act{font-size:.92rem;color:var(--ink)}
+.finding .act::before{content:"What to do: ";font-weight:600}
+.finding .bumped{font-size:.82rem;color:#A34F4A}
+.none{padding:1.1rem 0;color:rgba(23,35,28,.7);border-bottom:1px solid rgba(23,35,28,.2)}
+
+/* ---------- the phone: Clarity's own design system (Theme.swift) ---------- */
+.phone{width:300px;height:620px;border-radius:46px;background:#1d1a16;padding:10px;box-shadow:0 30px 60px -22px rgba(41,34,28,.6),inset 0 0 0 2px #3a342c;position:relative;flex:none}
+.cl{--bg:#F7F2E9;--surface:#FFFEF9;--ink:#29231C;--sec:#665C4F;--accent:#4D6645;--coral:#A34F4A;--peach:#946331;--lav:#7D5F80;--sky:#4D7A87;--soft:#E8E8D6;--primary:#384530;--border:rgba(87,102,77,.18);
+  width:100%;height:100%;border-radius:37px;overflow:hidden;overflow:clip;position:relative;isolation:isolate;background:var(--bg);color:var(--ink);
+  font-family:ui-serif,"New York","Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:13px;line-height:1.35;-webkit-font-smoothing:antialiased}
+.cl *{box-sizing:border-box}
+.cl button{font-family:inherit;color:inherit}
+.cl::before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:rgba(148,99,49,.13);right:-150px;top:-120px;filter:blur(4px)}
+.cl::after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(77,102,69,.08);left:-150px;bottom:40px}
+.cl-island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:88px;height:25px;border-radius:14px;background:#000;z-index:60}
+.cl.dark .cl-status{color:#fff}
+.cl-status{position:absolute;top:13px;left:26px;right:24px;display:flex;justify-content:space-between;font:600 12px -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;z-index:55}
+.cl-view{position:absolute;inset:0;padding:48px 16px 84px;overflow-y:auto;overflow-x:hidden;overflow-x:clip;display:none;z-index:1;scrollbar-width:none}
+.cl-view::-webkit-scrollbar{display:none}
+.cl-view.on{display:block}
+.cl-eyebrow{font:700 10px -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.cl-title{font-size:25px;font-weight:600;line-height:1.08;margin:3px 0 3px;letter-spacing:-.01em}
+.cl-sub{color:var(--sec);font-size:12.5px}
+.cl-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:14px}
+.cl-badge{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:none}
+.cl-badge svg{width:16px;height:16px}
+.cl-sect{font:700 9.5px -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sec);margin:16px 0 8px;display:flex;justify-content:space-between}
+.cl-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:13px 14px;box-shadow:0 8px 18px rgba(41,34,28,.07);margin-bottom:10px}
+.cl-hero{border-radius:24px;padding:16px;display:flex;gap:14px;align-items:center;color:#fff;background:linear-gradient(135deg,#877D6E,#59634F);box-shadow:0 10px 20px rgba(125,95,128,.24)}
+.cl-hero .lab{font:700 9.5px -apple-system,system-ui,sans-serif;letter-spacing:.1em;opacity:.85}
+.cl-hero .big{font-size:17px;font-weight:700;line-height:1.15;margin:3px 0}
+.cl-hero .small{font-size:10.5px;opacity:.78}
+.ring{position:relative;flex:none}
+.ring svg{display:block;transform:rotate(-90deg)}
+.ring span{position:absolute;inset:0;display:grid;place-items:center;font:700 var(--fs,20px) ui-rounded,-apple-system,system-ui,sans-serif}
+.cl-strip{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}
+.cl-strip::-webkit-scrollbar{display:none}
+.cl-metric{flex:none;width:122px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:11px;box-shadow:0 6px 14px rgba(41,34,28,.06)}
+.cl-metric .nm{font-size:11.5px;font-weight:600;margin:7px 0 5px;line-height:1.2;min-height:2.4em}
+.pill{display:inline-flex;align-items:center;gap:3px;font:700 9.5px -apple-system,system-ui,sans-serif;padding:3px 7px;border-radius:10px}
+.cl-step{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--border);cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;width:100%;text-align:left}
+.cl-step:first-of-type{border-top:0}
+.cl-step .bx{width:19px;height:19px;border-radius:7px;border:1.8px solid rgba(102,92,79,.5);flex:none;margin-top:1px;display:grid;place-items:center}
+.cl-step.done .bx{background:var(--accent);border-color:var(--accent)}
+.cl-step.done .bx::after{content:"";width:8px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.cl-step b{display:block;font-size:13px}
+.cl-step small{color:var(--sec);font-size:11px}
+.cl-step .why{display:none;color:var(--sec);font-size:11px;margin-top:3px;font-style:italic}
+.cl-step.open .why{display:block}
+.cl-primary{display:block;width:100%;border:0;border-radius:15px;background:var(--primary);color:#fff !important;font:600 14px -apple-system,system-ui,sans-serif;padding:13px;cursor:pointer;margin-top:12px}
+.cl-primary:disabled{opacity:.55;cursor:default}
+.cl-seg{display:flex;background:rgba(77,102,69,.1);border-radius:11px;padding:3px;margin-bottom:10px}
+.cl-seg button{flex:1;border:0;background:none;padding:6px;border-radius:9px;font:600 12px -apple-system,system-ui,sans-serif;cursor:pointer;color:var(--sec)}
+.cl-seg button.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.cl-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--border)}
+.cl-row:first-child{border-top:0}
+.cl-row .bar{flex:1;height:6px;border-radius:3px;background:rgba(41,34,28,.08);overflow:hidden}
+.cl-row .bar i{display:block;height:100%;border-radius:3px}
+.cl-row .v{font:700 13px ui-rounded,-apple-system,system-ui,sans-serif;width:26px;text-align:right}
+.cl-row .n{width:112px;font-size:11.5px;font-weight:600;line-height:1.2}
+.cl-chart svg{width:100%;height:110px;display:block}
+.cl-axis{display:flex;justify-content:space-between;font:10px -apple-system,system-ui,sans-serif;color:var(--sec)}
+.cl-cat{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--border);font-size:12.5px}
+.cl-cat:first-child{border-top:0}
+.cl-cat span:last-child{font:600 12px ui-rounded,-apple-system,system-ui,sans-serif;color:var(--sec)}
+/* tab bar + floating scan button */
+.cl-tabs{position:absolute;left:0;right:0;bottom:0;height:74px;background:var(--surface);border-top:1px solid var(--border);display:flex;padding:8px 6px 0;z-index:20}
+.cl-tabs button{flex:1;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;font:500 10px -apple-system,system-ui,sans-serif;color:#9a9286;cursor:pointer}
+.cl-tabs button svg{width:21px;height:21px}
+.cl-tabs button.on{color:var(--accent)}
+.cl-fab{position:absolute;right:16px;bottom:86px;z-index:30;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.cl-fab .main{width:52px;height:52px;border-radius:50%;background:var(--primary);border:3px solid rgba(255,255,255,.85);box-shadow:0 6px 12px rgba(41,34,28,.2);display:grid;place-items:center;cursor:pointer;color:#fff;transition:transform .2s}
+.cl-fab .main svg{width:22px;height:22px}
+.cl-fab.open .main{transform:rotate(90deg)}
+.cl-fab .act{display:none;align-items:center;gap:8px;border:0;background:var(--surface);border-radius:22px;padding:6px 12px 6px 6px;box-shadow:0 5px 14px rgba(41,34,28,.16);font:600 12px -apple-system,system-ui,sans-serif;cursor:pointer}
+.cl-fab.open .act{display:flex;animation:pop .2s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.cl-fab .act i{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-style:normal}
+.cl-fab .act svg{width:15px;height:15px}
+/* camera */
+.cl-cam{position:absolute;inset:0;background:#0f0d0b;z-index:40;display:none;flex-direction:column;color:#fff}
+.cl-cam.on{display:flex}
+.cam-top{display:flex;justify-content:space-between;padding:44px 18px 6px;font:600 13px -apple-system,system-ui,sans-serif}
+.cam-top button{border:0;background:none;color:#fff;font:inherit;cursor:pointer}
+.vf{position:relative;flex:1;margin:4px 12px 0;border-radius:22px;overflow:hidden;overflow:clip;background:radial-gradient(circle at 50% 42%,#4a443c,#1b1815 72%);touch-action:none;cursor:grab}
+.vf:active{cursor:grabbing}
+.vf svg{position:absolute;inset:0;width:100%;height:100%}
+.cam-ctrl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;align-items:center;padding:10px 20px 2px;font:500 10.5px -apple-system,system-ui,sans-serif;color:rgba(255,255,255,.75)}
+.cam-ctrl input[type=range]{width:100%;accent-color:#AFCC9E;height:16px}
+.cam-ctrl label.two{grid-column:1/-1;display:flex;align-items:center;gap:6px;cursor:pointer}
+.cam-bottom{padding:6px 18px 22px;text-align:center}
+.cam-bottom .st{font:700 18px -apple-system,system-ui,sans-serif}
+.cam-bottom .fb{font:400 12px -apple-system,system-ui,sans-serif;color:rgba(255,255,255,.82);min-height:2.6em;margin:3px 0 4px}
+.cam-bottom .fb.bad{color:#F0A89E}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .3s}
+.flash.go{opacity:.85;transition:none}
+/* sheet */
+.cl-sheet{position:absolute;inset:0;z-index:45;background:rgba(20,17,14,.35);display:none;align-items:flex-end}
+.cl-sheet.on{display:flex}
+.cl-sheet .pane{background:var(--bg);width:100%;border-radius:24px 24px 0 0;padding:14px 16px 26px;max-height:88%;overflow:auto;animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(40px);opacity:.3}}
+.pane-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font:600 13px -apple-system,system-ui,sans-serif}
+.pane-top button{border:0;background:none;color:var(--accent);font:inherit;cursor:pointer}
+.opts{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}
+.opts button{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:5px 11px;font:500 12px -apple-system,system-ui,sans-serif;cursor:pointer}
+.opts button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.barcode{height:120px;border-radius:18px;background:#1b1815;position:relative;overflow:hidden;margin:8px 0 12px}
+.barcode::before{content:"";position:absolute;inset:22px 30px;border:2px solid rgba(255,255,255,.7);border-radius:10px}
+.barcode::after{content:"";position:absolute;left:34px;right:34px;height:2px;background:#E8A89A;top:30px;animation:scan 1.8s ease-in-out infinite alternate}
+@keyframes scan{to{top:88px}}
+.cl input.num{width:100%;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:9px 11px;font:500 13px -apple-system,system-ui,sans-serif;color:var(--ink)}
+.cl-note{font-size:11.5px;color:var(--sec);margin-top:8px;min-height:1.2em}
+.cl-toast{position:absolute;left:50%;top:48px;transform:translate(-50%,-10px);background:var(--ink);color:#fff;font:600 12px -apple-system,system-ui,sans-serif;padding:7px 13px;border-radius:14px;z-index:70;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
+.cl-toast.show{opacity:1;transform:translate(-50%,0)}
+.cl-analyzing{position:absolute;inset:0;z-index:50;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px;text-align:center;color:var(--sec)}
+.cl-analyzing.on{display:flex}
+.cl-spin{width:46px;height:46px;border-radius:50%;border:4px solid var(--soft);border-top-color:var(--accent);animation:spin .9s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.card{background:#fff;border:1px solid #EAECF0;border-radius:16px;padding:12px 14px;margin-bottom:10px}
-.zones{display:flex;justify-content:center;margin:-4px 0 6px}
-.zones svg{width:150px;height:170px}
-.zones .z{cursor:pointer;transition:opacity .15s}
-.zones .z:hover{opacity:.8}
-.zone-detail{font-size:13px}
-.zone-detail b{display:block;font-size:15px;margin-bottom:2px}
-.pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:1px}
-.p-clear{background:#E7F6EC;color:#1E7A3E}.p-mild{background:#FFF4DB;color:#946200}.p-mod{background:#FDE8E4;color:#B03A1F}
-.app-btn{border:0;background:#2D5BD0;color:#fff;font-weight:600;font-size:15px;border-radius:14px;padding:12px;cursor:pointer;margin-top:auto;font-family:inherit}
-.seg{display:flex;background:#EEF0F3;border-radius:10px;padding:3px;margin-bottom:12px}
-.seg button{flex:1;border:0;background:none;padding:6px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;color:#475467;font-family:inherit}
-.seg button.on{background:#fff;color:#1B2230;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-.steps{list-style:none;margin:0;padding:0}
-.steps li{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #EAECF0;cursor:pointer}
-.steps li .box{width:20px;height:20px;border-radius:6px;border:2px solid #C5CBD3;flex:none;margin-top:1px;display:grid;place-items:center}
-.steps li.done .box{background:#2D5BD0;border-color:#2D5BD0}
-.steps li.done .box::after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
-.steps li.done .t{color:#98A2B3;text-decoration:line-through}
-.steps .t b{display:block;font-size:14px}
-.steps .t small{color:#667085;font-size:12px}
-.chart{display:flex;align-items:flex-end;gap:5px;height:110px;padding:6px 0}
-.chart i{flex:1;background:#C9D6F5;border-radius:4px 4px 2px 2px;min-height:4px}
-.chart i.today{background:#2D5BD0}
-.chart-axis{display:flex;justify-content:space-between;font-size:11px;color:#98A2B3}
-.moods{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
-.moods button{border:1px solid #D0D5DD;background:#fff;border-radius:14px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;color:#344054}
-.moods button.on{background:#1B2230;color:#fff;border-color:#1B2230}
 
 /* ---------- record ---------- */
 .record-list{border-top:1px solid var(--buff-faint);margin-top:2.2rem}
@@ -292,6 +378,7 @@ footer{padding:2.5rem 0 3rem;color:var(--buff-soft);font-size:.9rem}
   .name{margin-bottom:1.2rem}
   .clarity .grid{grid-template-columns:1fr;justify-items:center}
   .clarity .copy{justify-self:stretch}
+  .conf{grid-template-columns:1fr}
   .rec{grid-template-columns:7rem minmax(0,1fr)}
   .rec p{grid-column:2}
   .edu{grid-template-columns:1fr}
@@ -307,6 +394,8 @@ footer{padding:2.5rem 0 3rem;color:var(--buff-soft);font-size:.9rem}
   .rec{grid-template-columns:1fr;gap:.4rem}
   .rec p{grid-column:1}
   .clarity .copy li{grid-template-columns:1fr;gap:.1rem}
+  .finding{grid-template-columns:1fr;gap:.4rem}
+  .sev{justify-self:start}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -444,89 +533,170 @@ footer{padding:2.5rem 0 3rem;color:var(--buff-soft);font-size:.9rem}
 </section>
 
 <section class="clarity band" id="clarity" aria-labelledby="clarityH">
-  <div class="wrap grid">
-    <div class="phone" aria-label="Interactive walkthrough of the Clarity app">
-      <div class="screen">
-        <div class="island"></div>
+  <div class="wrap">
+    <div class="grid">
+      <div class="phone-col">
+        <div class="phone" aria-label="Interactive walkthrough of the Clarity app">
+          <div class="cl" id="cl">
+            <div class="cl-island"></div>
+            <div class="cl-status"><span id="clClock">9:41</span><span>●●● ▮</span></div>
+            <div class="cl-toast" id="clToast"></div>
 
-        <div class="app-view on" data-view="scan">
-          <div class="cam" id="cam">
-            <div class="step" id="camStep">Photo 1 of 3</div>
-            <div class="ask" id="camAsk">Look straight at the camera</div>
-            <svg class="face" viewBox="0 0 220 280" aria-hidden="true">
-              <ellipse cx="110" cy="138" rx="86" ry="112" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-dasharray="6 7"/>
-              <g class="outline" id="faceG">
-                <ellipse cx="110" cy="138" rx="68" ry="90" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="2"/>
-                <g id="feat">
-                  <ellipse cx="86" cy="124" rx="9" ry="5" fill="none" stroke="#fff" stroke-width="2"/>
-                  <ellipse cx="134" cy="124" rx="9" ry="5" fill="none" stroke="#fff" stroke-width="2"/>
-                  <path d="M110 132 L104 160 Q110 164 116 160" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M92 186 Q110 198 128 186" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                </g>
-              </g>
-            </svg>
-            <div class="dots" id="camDots"><i class="on"></i><i></i><i></i></div>
-            <button class="shutter" id="shutter" aria-label="Take photo"><span></span></button>
-            <div class="flash" id="flash"></div>
+            <!-- Today -->
+            <div class="cl-view on" data-v="today">
+              <div class="cl-hdr">
+                <div><div class="cl-eyebrow" id="clGreet">Good evening</div><div class="cl-title">Here's your skin day</div><div class="cl-sub">Small steps, visible progress</div></div>
+                <div class="cl-badge" style="background:rgba(125,95,128,.13);color:var(--lav)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M4 20.5c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5z"/></svg></div>
+              </div>
+              <div class="cl-hero" id="clHero"></div>
+              <div class="cl-sect"><span>Latest scores</span><span style="color:var(--accent);cursor:pointer" data-tab="progress">See all</span></div>
+              <div class="cl-strip" id="clStrip"></div>
+              <div class="cl-card" style="margin-top:12px">
+                <div style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:15px">Tonight's routine</b><span class="cl-sub" id="clPmCount"></span></div>
+                <div id="clPmSteps" style="margin-top:6px"></div>
+              </div>
+              <button class="cl-primary" id="clCheckinBtn">Add today's check-in</button>
+            </div>
+
+            <!-- Progress -->
+            <div class="cl-view" data-v="progress">
+              <div class="cl-hdr"><div><div class="cl-eyebrow">Your journey</div><div class="cl-title">Skin progress</div></div></div>
+              <div class="cl-card cl-chart">
+                <div class="cl-sect" style="margin:0 0 2px"><span>Overall clarity score</span></div>
+                <div style="font:700 30px ui-rounded,-apple-system,system-ui,sans-serif;color:var(--accent)" id="clOverallBig"></div>
+                <svg id="clChart" viewBox="0 0 240 110" preserveAspectRatio="none" aria-label="Overall score by week"></svg>
+                <div class="cl-axis"><span id="clAxisStart">8 weeks ago</span><span>Latest</span></div>
+              </div>
+              <div class="cl-sect"><span>Your skin scores</span><span style="letter-spacing:0;text-transform:none;font-weight:500">Higher is better</span></div>
+              <div class="cl-card" id="clScores"></div>
+            </div>
+
+            <!-- Products -->
+            <div class="cl-view" data-v="products">
+              <div class="cl-hdr"><div><div class="cl-eyebrow">Product library</div><div class="cl-title">Find your next product</div><div class="cl-sub">354 products from 9 brands, with full ingredient lists from each brand's own site</div></div></div>
+              <div class="cl-sect"><span>Browse by step</span></div>
+              <div class="cl-card" id="clCats"></div>
+              <div class="cl-card"><b style="font-size:13px">How products are ranked</b><div class="cl-sub" style="margin-top:4px">By fit with your skin and routine. Store commission is never part of the ranking.</div></div>
+            </div>
+
+            <!-- Routine -->
+            <div class="cl-view" data-v="routine">
+              <div class="cl-hdr"><div><div class="cl-eyebrow">Your plan</div><div class="cl-title">Daily routine</div><div class="cl-sub">Tap a step to see why it's there. Tap the box to check it off.</div></div></div>
+              <div class="cl-seg"><button class="on" data-rt="am">Morning</button><button data-rt="pm">Evening</button></div>
+              <div class="cl-card" id="clRoutine"></div>
+              <div class="cl-sub" style="padding:0 4px">A barrier-first routine for balanced skin and medium sensitivity, built around fewer visible breakouts. Start one new product at a time.</div>
+            </div>
+
+            <!-- Results -->
+            <div class="cl-view" data-v="results">
+              <div class="cl-hdr"><div><div class="cl-eyebrow">Scan details</div><div class="cl-title">Your skin snapshot</div><div class="cl-sub" id="clResDate"></div></div></div>
+              <div class="cl-hero" id="clResHero"></div>
+              <div class="cl-sect"><span>Attribute scores</span><span style="letter-spacing:0;text-transform:none;font-weight:500">Higher is better</span></div>
+              <div class="cl-card" id="clResScores"></div>
+              <div class="cl-card"><b style="font-size:13px">Individual-cluster map unavailable</b><div class="cl-sub" style="margin-top:3px">This walkthrough has no photo to analyze, so there are no breakout clusters to mark.</div></div>
+              <button class="cl-primary" data-tab="today">Done</button>
+            </div>
+
+            <nav class="cl-tabs" aria-label="App tabs">
+              <button class="on" data-tab="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>Today</button>
+              <button data-tab="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5.5-5.5 4 4L21 7"/><path d="M15 7h6v6"/></svg>Progress</button>
+              <button data-tab="products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Products</button>
+              <button data-tab="routine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5l1.6 1.6L8.5 5M4 12.5l1.6 1.6 2.9-3.1M4 18.5l1.6 1.6 2.9-3.1M11.5 7h8.5M11.5 13h8.5M11.5 19h8.5"/></svg>Routine</button>
+            </nav>
+            <div class="cl-fab" id="clFab">
+              <button class="act" data-scan="product"><i style="background:rgba(148,99,49,.14);color:var(--peach)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8V5h3M17 5h3v3M20 16v3h-3M7 19H4v-3M8 9v6M11 9v6M14 9v6M17 9v6"/></svg></i>Scan product</button>
+              <button class="act" data-scan="face"><i style="background:rgba(77,102,69,.14);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5q3.5 3 7 0M9 9.5h.01M15 9.5h.01"/></svg></i>Scan face</button>
+              <button class="main" id="clFabMain" aria-label="Open scan menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/></svg></button>
+            </div>
+
+            <!-- Face capture -->
+            <div class="cl-cam" id="clCam">
+              <div class="cam-top"><span id="camStage">1 of 3</span><button id="camCancel">Cancel</button></div>
+              <div class="vf" id="vf">
+                <svg viewBox="0 0 250 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <ellipse cx="125" cy="146" rx="78" ry="102" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-dasharray="6 7"/>
+                  <g id="face2" opacity="0"><ellipse cx="208" cy="90" rx="30" ry="40" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.7)" stroke-width="1.5"/><circle cx="199" cy="84" r="2.5" fill="#fff"/><circle cx="216" cy="84" r="2.5" fill="#fff"/><path d="M200 103q8 5 16 0" stroke="#fff" fill="none" stroke-width="1.5"/></g>
+                  <g id="faceG">
+                    <ellipse id="faceO" cx="0" cy="0" rx="62" ry="80" fill="rgba(232,198,170,.18)" stroke="#fff" stroke-width="2"/>
+                    <g id="faceF">
+                      <ellipse cx="-22" cy="-12" rx="8" ry="4.5" fill="none" stroke="#fff" stroke-width="2"/>
+                      <ellipse cx="22" cy="-12" rx="8" ry="4.5" fill="none" stroke="#fff" stroke-width="2"/>
+                      <path d="M0 -6 L-6 20 Q0 24 6 20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M-16 42 Q0 52 16 42" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                  </g>
+                </svg>
+                <div class="flash" id="flash"></div>
+              </div>
+              <div class="cam-ctrl">
+                <label for="camDist">Distance</label><input type="range" id="camDist" min="0" max="100" value="55">
+                <label for="camTurn">Turn</label><input type="range" id="camTurn" min="-40" max="40" value="0">
+                <label class="two"><input type="checkbox" id="camTwo"> Someone else in the frame</label>
+              </div>
+              <div class="cam-bottom">
+                <div class="st" id="camTitle">Look straight ahead</div>
+                <div class="fb" id="camFb">Center your face inside the guide</div>
+                <button class="cl-primary" id="camCapture" style="margin-top:4px">Capture</button>
+              </div>
+            </div>
+            <div class="cl-analyzing" id="clAnalyzing"><div class="cl-spin"></div><div>Checking image quality and mapping visible features…</div></div>
+
+            <!-- Check-in sheet -->
+            <div class="cl-sheet" id="clCheckin">
+              <div class="pane">
+                <div class="pane-top"><button data-close>Cancel</button><span>Daily check-in</span><button id="clSaveLog">Save</button></div>
+                <div class="cl-sect" style="margin-top:4px"><span>How is your skin feeling today?</span></div>
+                <div class="opts" data-group="feel"><button class="on">Normal</button><button>Dry</button><button>Oily</button><button>Irritated</button></div>
+                <div class="cl-sect"><span>Any new breakouts?</span></div>
+                <div class="opts" data-group="new"><button class="on">None</button><button>A few</button><button>Several</button></div>
+                <div class="cl-sect"><span>Routine</span></div>
+                <div class="opts" data-group="done" data-multi><button class="on">AM completed</button><button>PM completed</button></div>
+              </div>
+            </div>
+            <!-- Product scan sheet -->
+            <div class="cl-sheet" id="clProduct">
+              <div class="pane">
+                <div class="pane-top"><button data-close>Close</button><span>Scan a product</span><span style="width:40px"></span></div>
+                <b style="font-size:16px">Scan the product barcode</b>
+                <div class="cl-sub">Hold the barcode inside the frame. Clarity will look it up automatically.</div>
+                <div class="barcode"></div>
+                <div class="cl-sect" style="margin-top:0"><span>Or enter the number</span></div>
+                <input class="num" id="clBarcode" inputmode="numeric" placeholder="e.g. 8809598450110" aria-label="Barcode number">
+                <button class="cl-primary" id="clLookup">Look up product</button>
+                <div class="cl-note" id="clLookupNote"></div>
+              </div>
+            </div>
           </div>
-          <div class="analyzing" id="analyzing"><div class="spin"></div><div>Reading three angles…</div></div>
         </div>
+        <p class="phone-hint" id="phoneHint">Tap the scan button to try the guided face capture.</p>
+      </div>
 
-        <div class="app-view" data-view="results">
-          <div class="app-title">Scan results</div>
-          <div class="app-sub">Tap an area for details</div>
-          <div class="zones">
-            <svg viewBox="0 0 150 170" aria-label="Face map">
-              <ellipse cx="75" cy="88" rx="58" ry="76" fill="#F2E4D8" stroke="#D9C5B4" stroke-width="1.5"/>
-              <path class="z" data-z="forehead" d="M28 60 Q75 8 122 60 Q75 48 28 60Z" fill="#F6C766" opacity=".8"/>
-              <ellipse class="z" data-z="rcheek" cx="42" cy="104" rx="15" ry="19" fill="#F29A86" opacity=".85"/>
-              <ellipse class="z" data-z="lcheek" cx="108" cy="104" rx="15" ry="19" fill="#9ED6AE" opacity=".85"/>
-              <ellipse class="z" data-z="nose" cx="75" cy="98" rx="9" ry="18" fill="#9ED6AE" opacity=".85"/>
-              <path class="z" data-z="chin" d="M52 144 Q75 168 98 144 Q75 152 52 144Z" fill="#F6C766" opacity=".85"/>
-              <ellipse cx="58" cy="78" rx="7" ry="3.5" fill="#7A6658"/><ellipse cx="92" cy="78" rx="7" ry="3.5" fill="#7A6658"/>
-            </svg>
-          </div>
-          <div class="card zone-detail" id="zoneDetail"></div>
-          <button class="app-btn" data-go="routine">Build my routine</button>
-        </div>
-
-        <div class="app-view" data-view="routine">
-          <div class="app-title">Routine</div>
-          <div class="app-sub">Built from your last scan</div>
-          <div class="seg"><button class="on" data-rt="am">Morning</button><button data-rt="pm">Evening</button></div>
-          <ul class="steps" id="steps"></ul>
-        </div>
-
-        <div class="app-view" data-view="progress">
-          <div class="app-title">Progress</div>
-          <div class="app-sub">Active spots, last 14 days</div>
-          <div class="card"><div class="chart" id="chart"></div><div class="chart-axis"><span>2 weeks ago</span><span>Today</span></div></div>
-          <div class="card"><b style="font-size:14px">How does your skin feel today?</b>
-            <div class="moods" id="moods"><button>Calm</button><button>Oily</button><button>Dry</button><button>Irritated</button><button>Breaking out</button></div>
-          </div>
-        </div>
-
-        <nav class="tabs" aria-label="App tabs">
-          <button class="on" data-go="scan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>Scan</button>
-          <button data-go="results"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="7" ry="9"/><path d="M9 10h.01M15 10h.01M9.5 15.5q2.5 1.5 5 0"/></svg>Results</button>
-          <button data-go="routine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>Routine</button>
-          <button data-go="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Progress</button>
-        </nav>
+      <div class="copy">
+        <div class="cl-head"><svg class="cl-icon" viewBox="0 0 64 64" role="img" aria-label="Clarity app icon"><rect width="64" height="64" rx="15" fill="#F7F2E9"/><path d="M32 11c5.5 6 8.5 11 8.5 15.5a8.5 8.5 0 0 1-17 0C23.5 22 26.5 17 32 11z" fill="#DCE3D2" stroke="#6E8B63" stroke-width="1.6"/><path d="M32 17v17M32 23l-3.6-3M32 23l3.6-3M32 28l-4.4-3.6M32 28l4.4-3.6" stroke="#6E8B63" stroke-width="1.3" stroke-linecap="round" fill="none"/><text x="32" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="11.5" fill="#6E8B63">Clarity</text></svg><h2 id="clarityH">Clarity</h2></div>
+        <p>An iOS app for tracking your skin over time. Once a week you take three guided photos. Clarity scores breakouts, post-breakout marks, and texture as separate trends, then builds a short routine and matches products to it.</p>
+        <p>It's the whole stack, and I built all of it: the SwiftUI app, a Python backend, two computer-vision models, and a catalog of 354 products with verified ingredient lists.</p>
+        <p class="stack">Swift, SwiftUI, AVFoundation, Vision, WidgetKit, StoreKit 2. Python, FastAPI, SQLAlchemy, PostgreSQL, ONNX Runtime.</p>
+        <ul>
+          <li><b>Guided capture</b><span>Apple's Vision framework checks every frame before it's accepted: exactly one face, the right distance, and the right head angle for each of the three shots. That's what makes week eight comparable to week one. The phone runs the same checks with the same thresholds.</span></li>
+          <li><b>Two models</b><span>An Acne-LDS severity model anchors the breakout score, and a YOLOv8 detector trained on ACNE04 marks possible breakout clusters. Both run on the server through ONNX Runtime.</span></li>
+          <li><b>Separate scores</b><span>Breakouts, marks, and texture each get their own trend. The overall score weights them 50, 15, and 35 percent, so a good week for texture can't hide new breakouts.</span></li>
+          <li><b>Fit over commission</b><span>Routines stay short and barrier-first, with one active at a time. Products are ranked only on fit. Affiliate commission picks a store after the product is chosen and never affects which product you see.</span></li>
+          <li><b>A safety layer</b><span>Rules, not the AI coach, decide when to point someone to a professional: prescription treatment, eye-area concerns, severe pain, suspected reactions, or low model confidence.</span></li>
+        </ul>
+        <p class="fine">Clarity tracks cosmetic change and doesn't diagnose skin conditions. It's in development. Before the App Store it still needs validation across skin tones, lighting, and devices. The phone is a walkthrough built from the app's own design system, demo data, and capture rules. The code is private, and I'm happy to walk through it.</p>
       </div>
     </div>
 
-    <div class="copy">
-      <h2 id="clarityH">Clarity</h2>
-      <p>An iOS app that photographs your face from three angles, looks for acne, and builds a skincare routine around what it finds. Then it tracks whether the routine is working.</p>
-      <p>I designed and built all of it: the guided capture, the scan results, progress tracking, daily skin logs, the premium tier, the branding, and the App Store assets.</p>
-      <p class="stack">Swift, SwiftUI, AVFoundation, AI vision APIs</p>
-      <ul>
-        <li><b>Guided capture</b><span>The camera walks you through front, left, and right shots so every scan is comparable to the last.</span></li>
-        <li><b>Results by area</b><span>Findings are mapped to forehead, cheeks, nose, and chin instead of one overall score.</span></li>
-        <li><b>Routine</b><span>Morning and evening steps with product suggestions tied to what the scan found.</span></li>
-        <li><b>Progress</b><span>Daily logs and a running chart, so you can see a change before you'd notice it in the mirror.</span></li>
-      </ul>
-      <p class="fine">In development since August 2026. The phone on the left is a clickable walkthrough of the interface with sample data. Take the three photos to start.</p>
+    <div class="conf" aria-labelledby="confH">
+      <div>
+        <h3 id="confH">Five rules, run on any routine</h3>
+        <p>Before a product joins your routine, Clarity checks it against what you already use. These are the app's conflict rules, unchanged. Pick some products and see what they flag.</p>
+        <div class="chips" id="chips" role="group" aria-label="Products in your routine"></div>
+        <label class="sens"><input type="checkbox" class="switch" id="sensSw"> My skin is sensitive</label>
+      </div>
+      <div>
+        <div class="findings" id="findings" aria-live="polite"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1454,61 +1624,242 @@ $('mail').onclick = async () => {
   setTimeout(() => ($('copied').textContent = ''), 3500);
 };
 
-/* ================= Clarity walkthrough ================= */
+/* ================= Clarity walkthrough (built from the app's Theme.swift, DemoData.swift, ScanQualityEvaluator.swift) ================= */
 (function () {
-  const views = document.querySelectorAll('.app-view'), tabs = document.querySelectorAll('.tabs button');
-  let scanned = false;
+  const cl = $('cl'); if (!cl) return;
+  const q = (s) => cl.querySelector(s), qa = (s) => cl.querySelectorAll(s);
+  const C = { accent: '#4D6645', lav: '#7D5F80', sky: '#4D7A87', coral: '#A34F4A', sec: '#665C4F' };
+
+  // DemoData.scanHistory: eight weekly scans, extended by each scan taken here.
+  const obs = (i) => ({ breakout: Math.max(0.28, 0.66 - i * 0.045), marks: Math.max(0.31, 0.48 - i * 0.018), texture: Math.min(1, 0.46 + i * 0.04) });
+  const METRICS = [['breakout', 'Breakout activity', C.accent, false], ['marks', 'Post-breakout marks', C.lav, false], ['texture', 'Texture consistency', C.sky, true]];
+  const score = (o, k, positive) => Math.round(Math.min(Math.max(positive ? o[k] : 1 - o[k], 0), 1) * 100);
+  const scores = (o) => Object.fromEntries(METRICS.map(([k, , , pos]) => [k, score(o, k, pos)]));
+  const overall = (s) => Math.round((s.breakout * 0.5 + s.texture * 0.35 + s.marks * 0.15) / 1.0);
+  const trend = (d) => d == null ? ['Baseline', '–', C.sec] : d >= 2 ? ['Improving', '↗', C.accent] : d <= -2 ? ['Needs attention', '↘', C.coral] : ['Holding steady', '→', C.sec];
+  const DAY = 864e5;
+  let history = []; // {date, s}
+  for (let i = 0; i < 8; i++) history.push({ date: new Date(Date.now() - (49 - i * 7) * DAY), s: scores(obs(i)) });
+
+  function ring(value, color, size, track, fs) {
+    const r = (size - size * 0.09) / 2, c = 2 * Math.PI * r, w = Math.max(5, size * 0.09);
+    return `<div class="ring" style="width:${size}px;height:${size}px;--fs:${fs}px"><svg width="${size}" height="${size}"><circle cx="${size / 2}" cy="${size / 2}" r="${r}" fill="none" stroke="${track}" stroke-width="${w}"/><circle cx="${size / 2}" cy="${size / 2}" r="${r}" fill="none" stroke="${color}" stroke-width="${w}" stroke-linecap="round" stroke-dasharray="${c * value / 100} ${c}"/></svg><span style="color:${color}">${value}</span></div>`;
+  }
+  const fmtDate = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  function hero(latest, prev) {
+    const o = overall(latest.s), d = prev ? o - overall(prev.s) : null;
+    const lab = d == null ? 'BASELINE' : d >= 2 ? 'IMPROVING' : d <= -2 ? 'NEEDS ATTENTION' : 'HOLDING STEADY';
+    const sym = d == null ? '–' : d >= 2 ? '↗' : d <= -2 ? '↘' : '→';
+    const msg = (d || 0) >= 2 ? 'Your consistency is paying off' : (d || 0) <= -2 ? "Let's check what changed" : 'Your skin is staying steady';
+    return ring(o, '#fff', 82, 'rgba(255,255,255,.22)', 23) + `<div><div class="lab">${sym} ${lab}</div><div class="big">${msg}</div><div class="small">Latest guided scan · ${fmtDate(latest.date)}</div></div>`;
+  }
+  function scoreRows(latest, prev) {
+    return METRICS.map(([k, name, color]) => {
+      const v = latest.s[k], d = prev ? v - prev.s[k] : null, [lbl, sym, tc] = trend(d);
+      return `<div class="cl-row"><div class="n">${name}<div><span class="pill" style="color:${tc};background:${tc}1c;margin-top:3px">${sym} ${lbl}</span></div></div><div class="bar"><i style="width:${v}%;background:${color}"></i></div><div class="v" style="color:${color}">${v}</div></div>`;
+    }).join('');
+  }
+  function renderToday() {
+    const h = new Date().getHours();
+    q('#clGreet').textContent = h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
+    const latest = history[history.length - 1], prev = history[history.length - 2];
+    q('#clHero').innerHTML = hero(latest, prev);
+    q('#clStrip').innerHTML = METRICS.map(([k, name, color]) => {
+      const v = latest.s[k], d = v - prev.s[k], [lbl, sym, tc] = trend(d);
+      return `<div class="cl-metric">${ring(v, color, 44, color + '24', 13)}<div class="nm">${name}</div><span class="pill" style="color:${tc};background:${tc}1c">${sym} ${lbl}</span></div>`;
+    }).join('');
+  }
+  function renderProgress() {
+    const latest = history[history.length - 1];
+    q('#clOverallBig').textContent = overall(latest.s);
+    const vals = history.map((x) => overall(x.s)), lo = Math.min(...vals) - 6, hi = Math.max(...vals) + 6;
+    const pts = vals.map((v, i) => [8 + i * (224 / (vals.length - 1)), 100 - (v - lo) / (hi - lo) * 88]);
+    const path = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+    q('#clChart').innerHTML = `<path d="${path} L232 110 L8 110 Z" fill="rgba(77,102,69,.1)"/><path d="${path}" fill="none" stroke="${C.accent}" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>` +
+      pts.map((p, i) => `<circle cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 4 : 2.6}" fill="${i === pts.length - 1 ? C.accent : '#FFFEF9'}" stroke="${C.accent}" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`).join('');
+    q('#clAxisStart').textContent = (history.length - 1) + ' weeks ago';
+    q('#clScores').innerHTML = scoreRows(latest, history[history.length - 2]);
+  }
+
+  // Routine (DemoData.routine for the demo profile)
+  const ROUTINE = {
+    am: [['Gentle cleanser', 'Lukewarm water · ~30 sec', 'Cleanse without aggressive scrubbing.'], ['Moisturizer', 'Thin, even layer', 'Support your skin barrier.'], ['Broad-spectrum SPF', 'Final AM step', 'Protect skin from UV exposure.']],
+    pm: [['Gentle cleanser', 'Cleanse once', 'Remove sunscreen and surface buildup.'], ['OTC breakout-care step', 'Begin every other evening · follow label', 'One targeted step is easier to assess and less likely to create unnecessary irritation.'], ['Moisturizer', 'After treatment step', 'Support comfort and barrier function.']],
+  };
+  const done = { am: new Set(), pm: new Set() }; let rt = 'am'; const opened = new Set();
+  function stepsHTML(period, withWhy) {
+    return ROUTINE[period].map(([t, u, w], i) => `<button class="cl-step${done[period].has(i) ? ' done' : ''}" data-p="${period}" data-i="${i}"><span class="bx"></span><span><b>${t}</b><small>${u}</small>${withWhy ? `<span class="why">${w}</span>` : ''}</span></button>`).join('');
+  }
+  function renderRoutine() {
+    q('#clRoutine').innerHTML = stepsHTML(rt, true);
+    q('#clRoutine').querySelectorAll('.cl-step').forEach((el) => el.classList.toggle('open', opened.has(el.dataset.p + el.dataset.i)));
+    q('#clPmSteps').innerHTML = stepsHTML('pm', false);
+    q('#clPmCount').textContent = `${done.pm.size} of 3 done`;
+  }
+  cl.addEventListener('click', (e) => {
+    const st = e.target.closest('.cl-step'); if (!st) return;
+    const p = st.dataset.p, i = +st.dataset.i, key = p + i;
+    if (st.closest('#clRoutine') && !e.target.closest('.bx')) { opened.has(key) ? opened.delete(key) : opened.add(key); st.classList.toggle('open', opened.has(key)); return; }
+    done[p].has(i) ? done[p].delete(i) : done[p].add(i); renderRoutine();
+  });
+  qa('.cl-seg button').forEach((b) => b.addEventListener('click', () => { rt = b.dataset.rt; qa('.cl-seg button').forEach((x) => x.classList.toggle('on', x === b)); renderRoutine(); }));
+
+  // Products (backend/data/core_catalog/manifest.json)
+  const CATS = [['Cleansers', 35], ['Moisturizers', 35], ['Sunscreens', 13], ['Acne-care actives', 14], ['Exfoliants', 36], ['Retinoids', 23], ['Supporting care', 198]];
+  q('#clCats').innerHTML = CATS.map(([n, c]) => `<div class="cl-cat"><span>${n}</span><span>${c}</span></div>`).join('');
+
+  // Navigation
   function go(v) {
-    if (!scanned && (v === 'results')) v = 'scan';
-    views.forEach((el) => el.classList.toggle('on', el.dataset.view === v));
-    tabs.forEach((t) => t.classList.toggle('on', t.dataset.go === v));
+    qa('.cl-view').forEach((el) => el.classList.toggle('on', el.dataset.v === v));
+    qa('.cl-tabs button').forEach((t) => t.classList.toggle('on', t.dataset.tab === v));
+    const view = q(`.cl-view[data-v="${v}"]`); if (view) view.scrollTop = 0;
+    if (v === 'progress') renderProgress();
+    if (v === 'today') renderToday();
+    fab(false);
   }
-  document.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => go(b.dataset.go)));
-  const shots = [['Look straight at the camera', 0], ['Turn your head to the left', -22], ['Now turn to the right', 22]];
-  let shot = 0;
-  function setShot() {
-    $('camStep').textContent = `Photo ${shot + 1} of 3`; $('camAsk').textContent = shots[shot][0];
-    $('feat').setAttribute('transform', `translate(${shots[shot][1]} 0)`);
-    $('faceG').style.transform = `scaleX(${shot ? 0.9 : 1})`; $('faceG').style.transformOrigin = '110px 138px';
-    $('camDots').querySelectorAll('i').forEach((d, i) => d.classList.toggle('on', i <= shot));
-  }
-  $('shutter').onclick = () => {
-    const f = $('flash'); f.classList.add('go'); requestAnimationFrame(() => requestAnimationFrame(() => f.classList.remove('go')));
-    if (shot < 2) { shot++; setTimeout(setShot, 180); return; }
-    $('analyzing').classList.add('on');
-    setTimeout(() => { $('analyzing').classList.remove('on'); scanned = true; shot = 0; setShot(); go('results'); }, 1500);
-  };
-  const Z = {
-    forehead: ['Forehead', 'mild', 'Mild', 'A few small closed bumps near the hairline. Often congestion rather than inflamed acne.'],
-    lcheek: ['Left cheek', 'clear', 'Clear', 'Nothing active found.'],
-    rcheek: ['Right cheek', 'mod', 'Moderate', 'Three active spots and some redness. This is where your routine focuses first.'],
-    nose: ['Nose', 'clear', 'Clear', 'Some visible pores, no active spots.'],
-    chin: ['Chin and jaw', 'mild', 'Mild', 'Two small spots along the jawline.'],
-  };
-  function zone(k) { const z = Z[k]; $('zoneDetail').innerHTML = `<b>${z[0]}<span class="pill p-${z[1]}">${z[2]}</span></b>${z[3]}`; }
-  document.querySelectorAll('.zones .z').forEach((el) => el.addEventListener('click', () => zone(el.dataset.z)));
-  zone('rcheek');
-  const RT = {
-    am: [['Gentle cleanser', 'Non-foaming, fragrance-free'], ['Niacinamide serum', 'Calms redness on the right cheek'], ['Oil-free moisturizer', 'Lightweight, non-comedogenic'], ['Sunscreen', 'SPF 30 or higher, every day']],
-    pm: [['Gentle cleanser', 'Same as the morning'], ['Salicylic acid, 2%', 'Three nights a week, forehead and chin'], ['Spot treatment', 'Benzoyl peroxide on active spots only'], ['Moisturizer', 'Apply last']],
-  };
-  const done = { am: new Set(), pm: new Set() }; let rt = 'am';
-  function steps() {
-    const ul = $('steps'); ul.innerHTML = '';
-    RT[rt].forEach(([t, s], i) => {
-      const li = document.createElement('li'); li.className = done[rt].has(i) ? 'done' : '';
-      li.innerHTML = `<span class="box"></span><span class="t"><b>${t}</b><small>${s}</small></span>`;
-      li.onclick = () => { done[rt].has(i) ? done[rt].delete(i) : done[rt].add(i); steps(); };
-      ul.appendChild(li);
-    });
-  }
-  document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
-    rt = b.dataset.rt; document.querySelectorAll('.seg button').forEach((x) => x.classList.toggle('on', x === b)); steps();
+  cl.addEventListener('click', (e) => { const t = e.target.closest('[data-tab]'); if (t) go(t.dataset.tab); });
+  function fab(open) { $('clFab').classList.toggle('open', open); $('clFabMain').setAttribute('aria-label', open ? 'Close scan menu' : 'Open scan menu'); }
+  $('clFabMain').onclick = () => fab(!$('clFab').classList.contains('open'));
+  let toastT;
+  function toast(msg) { const t = $('clToast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 1800); }
+  const hint = (t) => { $('phoneHint').textContent = t; };
+
+  // Sheets
+  function sheet(id, on) { $(id).classList.toggle('on', on); }
+  cl.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { sheet('clCheckin', false); sheet('clProduct', false); } if (e.target.classList.contains('cl-sheet')) e.target.classList.remove('on'); });
+  $('clCheckinBtn').onclick = () => sheet('clCheckin', true);
+  qa('.opts').forEach((g) => g.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (g.hasAttribute('data-multi')) b.classList.toggle('on'); else g.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
   }));
-  steps();
-  const data = [9, 8, 9, 7, 8, 6, 6, 7, 5, 5, 4, 5, 3, 3];
-  $('chart').innerHTML = data.map((v, i) => `<i class="${i === data.length - 1 ? 'today' : ''}" style="height:${v * 10}%"></i>`).join('');
-  $('moods').addEventListener('click', (e) => { if (e.target.tagName !== 'BUTTON') return; $('moods').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b === e.target)); });
+  $('clSaveLog').onclick = () => { sheet('clCheckin', false); toast('Check-in saved'); };
+  $('clLookup').onclick = () => {
+    const v = $('clBarcode').value.trim();
+    $('clLookupNote').textContent = !/^\d{8,14}$/.test(v) ? 'Enter the 8 to 14 digit number under the barcode.' : 'Barcode lookup runs on Clarity\u2019s server, so it\u2019s off in this walkthrough. The conflict check beside the phone uses the app\u2019s real rules.';
+  };
+
+  // ----- Guided capture: ScanQualityEvaluator logic -----
+  const ANGLES = [['front', 'Look straight ahead'], ['left45', 'Turn about 45° left'], ['right45', 'Turn about 45° right']];
+  let stage = 0, capturing = false, face = { x: 0.5, y: 0.49 };
+  function faceArea() { const s = 0.28 + (+$('camDist').value / 100) * 0.62; return s * s * 0.9; } // share of the frame covered by the face box
+  function evaluate() {
+    const yaw = +$('camTurn').value; // Vision's yaw: a turn to the user's left reads as positive
+    const inFrame = Math.abs(face.x - 0.5) < 0.4 && Math.abs(face.y - 0.5) < 0.4;
+    const faces = (inFrame ? 1 : 0) + ($('camTwo').checked ? 1 : 0);
+    if (faces !== 1) return [false, faces === 0 ? 'Move your face into frame' : 'Only one face should be visible'];
+    const area = faceArea();
+    if (area < 0.12) return [false, 'Move closer'];
+    if (area > 0.62) return [false, 'Move slightly farther away'];
+    const side = 8, exp = ANGLES[stage][0];
+    if (exp === 'front' && Math.abs(yaw) > 14) return [false, 'Face the camera directly'];
+    if (exp === 'left45' && yaw < side) return [false, yaw < -side ? 'Turn the other way — toward your left' : 'Turn a little farther left'];
+    if (exp === 'right45' && yaw > -side) return [false, yaw > side ? 'Turn the other way — toward your right' : 'Turn a little farther right'];
+    return [true, 'Hold still'];
+  }
+  function drawFace() {
+    const s = 0.28 + (+$('camDist').value / 100) * 0.62, yaw = +$('camTurn').value;
+    const scale = s / 0.62, turn = Math.cos(yaw * Math.PI / 180);
+    $('faceG').setAttribute('transform', `translate(${face.x * 250} ${face.y * 300}) scale(${scale})`);
+    $('faceO').setAttribute('rx', (62 * (0.82 + 0.18 * turn)).toFixed(1));
+    $('faceF').setAttribute('transform', `translate(${(-yaw * 0.95).toFixed(1)} 0) scale(${(0.72 + 0.28 * turn).toFixed(3)} 1)`); // mirrored preview
+    $('face2').setAttribute('opacity', $('camTwo').checked ? 1 : 0);
+  }
+  function setStage() {
+    $('camStage').textContent = `${stage + 1} of 3`; $('camTitle').textContent = ANGLES[stage][1];
+  }
+  function feedback(msg, bad) { const f = $('camFb'); f.textContent = msg; f.classList.toggle('bad', !!bad); }
+  function openCam() {
+    stage = 0; face = { x: 0.5, y: 0.49 }; $('camDist').value = 55; $('camTurn').value = 0; $('camTwo').checked = false;
+    setStage(); drawFace(); feedback('Center your face inside the guide'); $('camCapture').textContent = 'Capture'; $('camCapture').disabled = false;
+    $('clCam').classList.add('on'); cl.classList.add('dark'); fab(false);
+    hint('Drag the face and use the sliders. Each shot has to pass the same checks the app runs.');
+  }
+  function closeCam() { $('clCam').classList.remove('on'); cl.classList.remove('dark'); hint('Tap the scan button to try the guided face capture.'); }
+  cl.addEventListener('click', (e) => { const s = e.target.closest('[data-scan]'); if (!s) return; if (s.dataset.scan === 'face') openCam(); else { fab(false); $('clLookupNote').textContent = ''; sheet('clProduct', true); } });
+  $('camCancel').onclick = () => { closeCam(); go('today'); };
+  ['camDist', 'camTurn', 'camTwo'].forEach((id) => $(id).addEventListener('input', drawFace));
+  const vf = $('vf'); let dragging = null;
+  vf.addEventListener('pointerdown', (e) => { dragging = { x: e.clientX, y: e.clientY, fx: face.x, fy: face.y }; vf.setPointerCapture(e.pointerId); });
+  vf.addEventListener('pointermove', (e) => {
+    if (!dragging) return; const r = vf.getBoundingClientRect();
+    face.x = Math.min(1.05, Math.max(-0.05, dragging.fx + (e.clientX - dragging.x) / r.width));
+    face.y = Math.min(1.05, Math.max(-0.05, dragging.fy + (e.clientY - dragging.y) / r.height)); drawFace();
+  });
+  vf.addEventListener('pointerup', () => { dragging = null; });
+  vf.addEventListener('pointercancel', () => { dragging = null; });
+  $('camCapture').onclick = () => {
+    if (capturing) return; capturing = true;
+    const btn = $('camCapture'); btn.textContent = 'Checking…'; btn.disabled = true;
+    const fl = $('flash'); fl.classList.add('go'); requestAnimationFrame(() => requestAnimationFrame(() => fl.classList.remove('go')));
+    setTimeout(() => {
+      capturing = false; btn.disabled = false; btn.textContent = 'Capture';
+      const [ok, msg] = evaluate();
+      if (!ok) { feedback(msg, true); return; }
+      if (stage < 2) { stage++; setStage(); feedback('Match the guide for a consistent comparison'); return; }
+      finishScan();
+    }, 420);
+  };
+  function finishScan() {
+    $('clCam').classList.remove('on'); cl.classList.remove('dark'); $('clAnalyzing').classList.add('on');
+    setTimeout(() => {
+      const prev = history[history.length - 1], i = history.length;
+      history.push({ date: new Date(Math.max(Date.now(), prev.date.getTime() + 7 * DAY)), s: scores(obs(i)) });
+      const latest = history[history.length - 1];
+      q('#clResDate').textContent = 'Guided scan · ' + fmtDate(latest.date);
+      q('#clResHero').innerHTML = hero(latest, prev);
+      q('#clResScores').innerHTML = scoreRows(latest, prev);
+      $('clAnalyzing').classList.remove('on'); go('results');
+      hint('That scan is now part of the history. Check the Progress tab.');
+    }, 1500);
+  }
+
+  renderToday(); renderRoutine();
+  const tick = () => { $('clClock').textContent = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(/\s?[AP]M/, ''); };
+  tick(); setInterval(tick, 30000);
+})();
+
+/* ================= Conflict rules (backend/app/services/product_conflicts.py) ================= */
+(function () {
+  const RULES = [
+    ['duplicate-retinoids', ['retinoid', 'retinoid'], 'high', 'Duplicate retinoids', 'Using more than one retinoid usually adds irritation without creating a sensible beginner routine.', 'Keep one retinoid and follow its label or clinician instructions.'],
+    ['retinoid-plus-strong-exfoliant', ['retinoid', 'exfoliant'], 'medium', 'Potentially irritating active combination', 'Retinoids and exfoliating acids can be difficult to introduce together, especially for sensitive skin.', 'Introduce one active at a time; consider alternating nights only if tolerated.'],
+    ['multiple-exfoliants', ['exfoliant', 'exfoliant'], 'medium', 'Multiple exfoliants', 'Stacking exfoliating products can increase dryness and irritation.', 'Choose one exfoliating step and reassess before adding another.'],
+    ['benzoyl-peroxide-plus-retinoid', ['benzoyl-peroxide', 'retinoid'], 'medium', 'Two acne actives', 'This combination may be appropriate in some regimens but is more irritating and timing depends on the products involved.', 'Use only with clear label or clinician guidance; avoid introducing both simultaneously.'],
+    ['multiple-fragranced-sensitive', ['fragrance', 'fragrance'], 'low', 'Several fragranced products', 'Multiple fragranced products can make it harder to identify an irritation trigger.', 'Prefer a simpler fragrance-free routine if your skin is reactive.'],
+  ];
+  const PRODUCTS = [
+    ['Retinol serum', ['retinoid'], 'retinoid'], ['Adapalene gel', ['retinoid'], 'retinoid'],
+    ['Glycolic acid toner', ['exfoliant'], 'exfoliant'], ['Salicylic acid cleanser', ['exfoliant'], 'exfoliant'],
+    ['Benzoyl peroxide wash', ['benzoyl-peroxide'], 'acne active'], ['Scented moisturizer', ['fragrance'], 'fragrance'],
+    ['Scented face mist', ['fragrance'], 'fragrance'], ['Ceramide moisturizer', [], 'barrier'], ['Mineral sunscreen', [], 'SPF'],
+  ];
+  const picked = new Set([0, 2]);
+  const chips = $('chips');
+  PRODUCTS.forEach(([n, , tag], i) => chips.insertAdjacentHTML('beforeend', `<button class="chip" aria-pressed="${picked.has(i)}" data-i="${i}">${n}<small>${tag}</small></button>`));
+  function evaluate() {
+    const fam = {};
+    [...picked].forEach((i) => new Set(PRODUCTS[i][1]).forEach((f) => (fam[f] = fam[f] || []).push(PRODUCTS[i][0])));
+    const high = $('sensSw').checked, out = [];
+    for (const [code, [a, b], sev, title, expl, action] of RULES) {
+      const A = fam[a] || [], B = fam[b] || [];
+      if (!(a === b ? A.length >= 2 : A.length && B.length)) continue;
+      const bumped = high && sev === 'medium';
+      out.push({ sev: bumped ? 'high' : sev, bumped, title, expl, action, items: [...new Set(A.concat(B))].sort() });
+    }
+    return out;
+  }
+  function render() {
+    const f = evaluate(), el = $('findings');
+    if (!picked.size) { el.innerHTML = '<div class="none">Pick at least one product.</div>'; return; }
+    el.innerHTML = f.length ? f.map((x) => `<div class="finding"><span class="sev ${x.sev}">${x.sev[0].toUpperCase() + x.sev.slice(1)}</span><div><b>${x.title}</b><p>${x.expl}</p><div class="act">${x.action}</div><p style="margin:.35rem 0 0;font-size:.85rem;color:rgba(23,35,28,.6)">${x.items.join(', ')}${x.bumped ? ' <span class="bumped">(raised from medium for sensitive skin)</span>' : ''}</p></div></div>`).join('')
+      : '<div class="none">No conflicts in this combination.</div>';
+  }
+  chips.addEventListener('click', (e) => {
+    const b = e.target.closest('.chip'); if (!b) return; const i = +b.dataset.i;
+    picked.has(i) ? picked.delete(i) : picked.add(i); b.setAttribute('aria-pressed', picked.has(i)); render();
+  });
+  $('sensSw').addEventListener('change', render);
+  render();
 })();
 
 /* ================= go ================= */
